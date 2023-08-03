@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -60,27 +61,30 @@ public class MainActivity extends AppCompatActivity {
         }
     });
         btnImpresion.setOnClickListener(v -> {
-            if (total != 0) {
-                Intent intent = new Intent(MainActivity.this, Impresion.class);
-                intent.putExtra("Cantidad", cantidad);
-                intent.putExtra("Intereses", interes);
-                intent.putExtra("Resultado", total);
-                startActivity(intent);
-            }
+            Log.d("MainActivity", "Cantidad: " + cantidad);
+            Log.d("MainActivity", "Intereses: " + interes);
+            Log.d("MainActivity", "Resultado: " + total);
+
+            Intent intent = new Intent(MainActivity.this, Impresion.class);
+            intent.putExtra("Cantidad", cantidad);
+            intent.putExtra("Intereses", interes);
+            intent.putExtra("Resultado", total);
+            startActivity(intent);
         });
     }
 
 
     public void calcular(View view){
         int porcentaje = 100;
-        float cantidad = Float.parseFloat(this.etCantidad.getText().toString());
-        float interes = Float.parseFloat(this.etInteres.getText().toString()) / porcentaje;
+        cantidad = Float.parseFloat(this.etCantidad.getText().toString());
+        interes = Float.parseFloat(this.etInteres.getText().toString());
         float resultadoDias = Float.parseFloat(String.valueOf(this.barraDias.getProgress()));
 
-        double total = ((cantidad * (interes/36000) * resultadoDias) * porcentaje);
+        total = ((cantidad * interes * resultadoDias)/ (365 * porcentaje));
         Toast.makeText(this, "El valor del interés es: "+total, Toast.LENGTH_SHORT).show();
-        tvResultado.setText("El valor del interés es: "+total);
+        tvResultado.setText("El valor del interés es: $"+total);
     }
+
 
 
     public void limpiar(View v){

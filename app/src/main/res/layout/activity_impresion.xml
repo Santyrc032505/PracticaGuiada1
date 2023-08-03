@@ -47,4 +47,15 @@
         android:text="@string/tvTotal"
         android:textAlignment="center"
         android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tvSuma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="@string/tvSuma"
+        android:textAlignment="center"
+        android:textSize="24sp" />
 </LinearLayout>

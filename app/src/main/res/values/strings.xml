@@ -14,4 +14,5 @@
     <string name="tvCantidad"></string>
     <string name="tvInteres"></string>
     <string name="tvTotal"></string>
+    <string name="tvSuma"></string>
 </resources>
