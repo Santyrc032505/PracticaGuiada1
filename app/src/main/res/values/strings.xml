@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Práctica Guiada 1</string>
+    <string name="tvTitulo">Cálculo de Intereses</string>
+    <string name="etCantidad">Cantidad de dinero</string>
+    <string name="etInteres">Tasa de interés</string>
+    <string name="tvDias">Días:</string>
+    <string name="tvResultadoDias"></string>
+    <string name="barraDias"></string>
+    <string name="btnCalcular">Calcular</string>
+    <string name="btnLimpiar">Limpiar</string>
+    <string name="btnImpresion">Impresión</string>
+    <string name="tvResultado"></string>
+    <string name="tvImpresion">Impresión</string>
+    <string name="tvCantidad"></string>
+    <string name="tvInteres"></string>
+    <string name="tvTotal"></string>
+</resources>

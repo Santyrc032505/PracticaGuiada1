@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="@string/tvTitulo"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/etCantidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="@string/etCantidad"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/etInteres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="@string/etInteres"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textSize="20dp" />
+    <TableRow
+        android:id="@+id/table_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/tvDias"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="4dp"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tvDias" />
+
+        <TextView
+            android:id="@+id/tvResultadoDias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:textSize="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:text="@string/tvResultadoDias" />
+    </TableRow>
+    <SeekBar
+        android:id="@+id/barraDias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="15dp"  />
+
+    <TableRow
+        android:id="@+id/table_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/btnCacular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="calcular"
+            android:text="@string/btnCalcular" />
+
+        <Button
+            android:id="@+id/btnLimpiar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="limpiar"
+            android:text="@string/btnLimpiar" />
+
+        <Button
+            android:id="@+id/btnImpresion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnImpresion" />
+    </TableRow>
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/tvResultado"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+</LinearLayout>
